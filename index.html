@@ -1,1 +1,40 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <div class="snow1"></div>
+    <div class="snow2"></div>
+
+
+    <div class="container">
+        <img src="Images/MC.png" class="object" data-value="4" alt="">
+        <img src="Images/Ground.png" class="object snowground" data-value="1" alt="">
+        <img src="Images/Snowman.png" class="object" data-value="10" alt="">
+        <img src="Images/Tree.png" class="object" data-value="9" alt="">
+        <img src="Images/Giftbox1.png" class="object" data-value="12" alt="">
+        <img src="Images/Giftbox2.png" class="object" data-value="14" alt="">
+    </div>
+    
+    <script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+            document.querySelectorAll(".object").forEach(function(move){
+                var speed = move.getAttribute('data-value')
+
+                var x = (window.innerWidth - e.pageX*speed) / 250
+                var y = (window.innerHeight - e.pageY*speed) / 250
+                console.log(x, y)
+
+                move.style.transform = `translateX(${x}px) translateY(${y}px)`
+            })
+        }
+    </script>
+</body>
+</html>
