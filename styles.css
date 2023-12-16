@@ -27,9 +27,19 @@ h5{
         left: -5px;
         top:-20px
     }
+    .logo{
+        top: 120px;
+    }
 
     .from{
         top: -200px
+    }
+
+    .tree{
+        left: -50px;
+    }
+    .snowman{
+        left: 50px;
     }
     img{
         position: absolute;
