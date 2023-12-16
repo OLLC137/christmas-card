@@ -28,6 +28,9 @@ h5{
         top:-20px
     }
 
+    .from{
+        top: -200px
+    }
     img{
         position: absolute;
         width: 100%;
